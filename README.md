@@ -48,6 +48,12 @@ We'll need to test this method as well.
 - Each letter in the puzzle can be used only once per word. 
 
 
+### Release 2:  Build a User Interface
+In the `runner.rb` file, let's write a script that displays a word search puzzle to users and asks them to input words for which to search.  After each word is input, we should report whether or not the word could be found in the puzzle.
+
+If the word is found, can we visually show the word to users?
+
+
 ## Conclusion
 The snaking algorithm is one of the more difficult challenges with which we're presented during Dev Bootcamp.  How do we feel about it?  Did it go well?  Where did we struggle?
 
