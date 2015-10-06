@@ -13,18 +13,18 @@ puzzle = [
   ["o", "t", "s", "d", "h", "o", "h"],
   ["s", "e", "x", "g", "s", "t", "a"],
   ["u", "r", "p", "i", "w", "e", "u"],
-  ["z", "s", "b", "n", "u", "i", "r"],
+  ["z", "s", "b", "n", "u", "i", "r"]
 ]
 ```
 *Figure 1*. Representing a word search puzzle as a nested array
 
-We'll be representing our word search puzzles as nested arrays.  The puzzle as a whole will be represented by the outer array.  Each row in the puzzle will be represented by one of the inner arrays.  (see Figure 1).
+We'll be representing our word search puzzles as nested arrays.  The puzzle as a whole will be represented by the outer array.  Each row in the puzzle will be represented by one of the inner arrays.  (see Figure 1)
 
 
 ## Releases
 ### Release 0: Finding Words in a Straight Line
 ![finding words in straight lines](readme-assets/straight-word.gif)  
-*Figure 2*.  Finding words in straight lines.
+*Figure 2*.  Finding the words *foxes*, *otters*, and *bison* in straight lines.
 
 In this first release, we're going to write a `straight_line_include?` method.  Our method will accept two arguments:  (1) a word we're looking for and (2) a word search puzzle modeled as a nested array.  The method will return `true` if the word can be found in the puzzle and `false` if not.  We're going to follow traditional word search behavior and only allow words to be found in straight lines (see Figure 2).
 
@@ -37,7 +37,7 @@ As always, we'll need to document the behavior of our method with tests.
 
 ### Release 1: Finding Snaking Words
 ![finding snaking words](readme-assets/snaking-word.gif)  
-*Figure 3*.  Finding words whose letters snake through the puzzle.
+*Figure 3*.  Finding the word *nighthawks* with letters that snake through the puzzle.
 
 In this release, we're going to write a `snaking_include?` method.  This method will accept the same arguments as our `straight_line_include?` method and return the same values, but the algorithm used to search for words will be different.  We'll remove the restriction that words need to appear in a single row, column, or diagonal.  Instead, we'll allow the letters of words to snake through the puzzle (see Figure 3).
 
