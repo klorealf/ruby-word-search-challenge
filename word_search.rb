@@ -1,5 +1,2 @@
-def straight_line_include?(word, puzzle)
-end
-
-def snaking_include?(word, puzzle)
+def word_search_include?(word, puzzle)
 end

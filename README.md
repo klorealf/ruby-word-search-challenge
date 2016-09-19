@@ -1,7 +1,7 @@
 # Word Search
 
 ## Summary
-In this challenge we're going to write a search algorithm that will tell us whether or not a word can be found in a [word search puzzle][wikipedia word search].  The specific rules that we need to follow will be detailed in the releases.
+In this challenge we're going to write a search algorithm that will tell us whether or not a word can be found in a [word search puzzle][wikipedia word search].  The specific rules that we need to follow will be detailed in the release.
 
 
 ### Puzzle Data Structure
@@ -22,29 +22,17 @@ We'll be representing our word search puzzles as nested arrays.  The puzzle as a
 
 
 ## Releases
-### Release 0: Finding Words in a Straight Line
-![finding words in straight lines](readme-assets/straight-word.gif)  
-*Figure 2*.  Finding the words *foxes*, *otters*, and *bison* in straight lines.
+### Release 0:  Finding Words in the Puzzle
+![finding snaking words](readme-assets/snaking-word.gif)  
+*Figure 2*.  Finding the word *nighthawks* with letters that snake through the puzzle.
 
-In this first release, we're going to write a `straight_line_include?` method.  Our method will accept two arguments:  (1) a word we're looking for and (2) a word search puzzle modeled as a nested array.  The method will return `true` if the word can be found in the puzzle and `false` if not.  We're going to follow traditional word search behavior and only allow words to be found in straight lines (see Figure 2).
+We're going to write a method named `word_search_include?`.  This method accepts two arguments:  the word to find and the cross word puzzle.  It returns `true` or `false` depending on whether the word is found in the puzzle.  As seen in Figure 2, the the word's letters can snake around the board vertically, horizontally, and diagonally.
 
 As always, we'll need to document the behavior of our method with tests.
 
-**Rules**  
-- Words can be found in horizontal, vertical, and diagonal lines.
-- Words can be spelled forward and backward.
-
-
-### Release 1: Finding Snaking Words
-![finding snaking words](readme-assets/snaking-word.gif)  
-*Figure 3*.  Finding the word *nighthawks* with letters that snake through the puzzle.
-
-In this release, we're going to write a `snaking_include?` method.  This method will accept the same arguments as our `straight_line_include?` method and return the same values, but the algorithm used to search for words will be different.  We'll remove the restriction that words need to appear in a single row, column, or diagonal.  Instead, we'll allow the letters of words to snake through the puzzle (see Figure 3).
-
-We'll need to test this method as well.
 
 **Rules**  
-- Words can snake horizontally, vertically, and diagonally.
+- Words can snake horizontally, vertically, and diagonally.  
 - Each letter in the puzzle can be used only once per word. 
 
 
@@ -55,7 +43,7 @@ If the word is found, can we visually show the word to users?
 
 
 ## Conclusion
-The snaking algorithm is one of the more difficult challenges with which we're presented during Dev Bootcamp.  How do we feel about it?  Did it go well?  Where did we struggle?
+This search algorithm is one of the more difficult challenges with which we're presented during Dev Bootcamp.  How do we feel about it?  Did it go well?  Where did we struggle?
 
 How was our testing approach?  Did we start with simpler words to find?  Maybe a one-letter word, followed by a two letter and so on?  
 
