@@ -7,11 +7,11 @@ In this challenge we're going to write a search algorithm that will tell us whet
 ### Puzzle Data Structure
 ```ruby
 puzzle = [
-  ["a", "k", "f", "o", "x", "e", "s"], 
+  ["a", "w", "o", "l", "v", "e", "s"], 
   ["s", "o", "a", "w", "a", "h", "p"], 
   ["i", "t", "c", "k", "e", "t", "n"],
   ["o", "t", "s", "d", "h", "o", "h"],
-  ["s", "e", "x", "g", "s", "t", "a"],
+  ["s", "e", "h", "g", "s", "t", "a"],
   ["u", "r", "p", "i", "w", "e", "u"],
   ["z", "s", "b", "n", "u", "i", "r"]
 ]
@@ -24,7 +24,7 @@ We'll be representing our word search puzzles as nested arrays.  The puzzle as a
 ## Releases
 ### Release 0: Finding Words in a Straight Line
 ![finding words in straight lines](readme-assets/straight-word.gif)  
-*Figure 2*.  Finding the words *foxes*, *otters*, and *bison* in straight lines.
+*Figure 2*.  Finding the words *wolves*, *otters*, and *bison* in straight lines.
 
 In this first release, we're going to write a `straight_line_include?` method.  Our method will accept two arguments:  (1) a word we're looking for and (2) a word search puzzle modeled as a nested array.  The method will return `true` if the word can be found in the puzzle and `false` if not.  We're going to follow traditional word search behavior and only allow words to be found in straight lines (see Figure 2).
 
