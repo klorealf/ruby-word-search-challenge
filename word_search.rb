@@ -1,6 +1,11 @@
 require "pry"
 def straight_line_include?(word, puzzle)
 # binding.pry
+  if horizontal?(word, puzzle) == true || vertical?(word, puzzle) == true || diagonal?(word, puzzle) == true
+    return true
+  else
+    return false
+  end
   # row1 = puzzle[0].join
   # row2 = puzzle[1].join
   # row3 = puzzle[2].join

@@ -1,92 +1,92 @@
 require_relative '../word_search'
 
-# describe 'straight_line_include?' do
+describe 'straight_line_include?' do
 
-#   it 'finds word in rows of array' do
-#     puzzle = [
-#     ["a", "w", "o", "l", "v", "e", "s"],
-#     ["s", "o", "a", "w", "a", "h", "p"],
-#     ["i", "t", "c", "k", "e", "t", "n"],
-#     ["o", "t", "s", "d", "h", "o", "h"],
-#     ["s", "e", "h", "g", "s", "t", "a"],
-#     ["u", "r", "p", "i", "w", "e", "u"],
-#     ["z", "s", "b", "n", "u", "i", "r"]
-#     ]
+  it 'finds word in rows of array' do
+    puzzle = [
+    ["a", "w", "o", "l", "v", "e", "s"],
+    ["s", "o", "a", "w", "a", "h", "p"],
+    ["i", "t", "c", "k", "e", "t", "n"],
+    ["o", "t", "s", "d", "h", "o", "h"],
+    ["s", "e", "h", "g", "s", "t", "a"],
+    ["u", "r", "p", "i", "w", "e", "u"],
+    ["z", "s", "b", "n", "u", "i", "r"]
+    ]
 
-#     expect(straight_line_include?('wolves', puzzle)).to eq true
-#   end
+    expect(straight_line_include?('wolves', puzzle)).to eq true
+  end
 
-#   it 'finds backwards word in rows of array' do
-#     puzzle = [
-#     ["a", "w", "o", "l", "v", "e", "s"],
-#     ["s", "o", "a", "w", "a", "h", "p"],
-#     ["i", "t", "c", "k", "e", "t", "n"],
-#     ["o", "t", "s", "d", "h", "o", "h"],
-#     ["s", "e", "h", "g", "s", "t", "a"],
-#     ["u", "r", "p", "i", "w", "e", "u"],
-#     ["z", "s", "b", "n", "u", "i", "r"]
-#     ]
+  it 'finds backwards word in rows of array' do
+    puzzle = [
+    ["a", "w", "o", "l", "v", "e", "s"],
+    ["s", "o", "a", "w", "a", "h", "p"],
+    ["i", "t", "c", "k", "e", "t", "n"],
+    ["o", "t", "s", "d", "h", "o", "h"],
+    ["s", "e", "h", "g", "s", "t", "a"],
+    ["u", "r", "p", "i", "w", "e", "u"],
+    ["z", "s", "b", "n", "u", "i", "r"]
+    ]
 
-#     expect(straight_line_include?('sevlow', puzzle)).to eq true
-#   end
+    expect(straight_line_include?('sevlow', puzzle)).to eq true
+  end
 
-#   it 'finds word in col of array' do
-#     puzzle = [
-#     ["a", "w", "o", "l", "v", "e", "s"],
-#     ["s", "o", "a", "w", "a", "h", "p"],
-#     ["i", "t", "c", "k", "e", "t", "n"],
-#     ["o", "t", "s", "d", "h", "o", "h"],
-#     ["s", "e", "h", "g", "s", "t", "a"],
-#     ["u", "r", "p", "i", "w", "e", "u"],
-#     ["z", "s", "b", "n", "u", "i", "r"]
-#     ]
+  it 'finds word in col of array' do
+    puzzle = [
+    ["a", "w", "o", "l", "v", "e", "s"],
+    ["s", "o", "a", "w", "a", "h", "p"],
+    ["i", "t", "c", "k", "e", "t", "n"],
+    ["o", "t", "s", "d", "h", "o", "h"],
+    ["s", "e", "h", "g", "s", "t", "a"],
+    ["u", "r", "p", "i", "w", "e", "u"],
+    ["z", "s", "b", "n", "u", "i", "r"]
+    ]
 
-#     expect(straight_line_include?('otters', puzzle)).to eq true
-#   end
+    expect(straight_line_include?('otters', puzzle)).to eq true
+  end
 
-#   it 'finds backwards word in col of array' do
-#     puzzle = [
-#     ["a", "w", "o", "l", "v", "e", "s"],
-#     ["s", "o", "a", "w", "a", "h", "p"],
-#     ["i", "t", "c", "k", "e", "t", "n"],
-#     ["o", "t", "s", "d", "h", "o", "h"],
-#     ["s", "e", "h", "g", "s", "t", "a"],
-#     ["u", "r", "p", "i", "w", "e", "u"],
-#     ["z", "s", "b", "n", "u", "i", "r"]
-#     ]
+  it 'finds backwards word in col of array' do
+    puzzle = [
+    ["a", "w", "o", "l", "v", "e", "s"],
+    ["s", "o", "a", "w", "a", "h", "p"],
+    ["i", "t", "c", "k", "e", "t", "n"],
+    ["o", "t", "s", "d", "h", "o", "h"],
+    ["s", "e", "h", "g", "s", "t", "a"],
+    ["u", "r", "p", "i", "w", "e", "u"],
+    ["z", "s", "b", "n", "u", "i", "r"]
+    ]
 
-#     expect(straight_line_include?('sretto', puzzle)).to eq true
-#   end
+    expect(straight_line_include?('sretto', puzzle)).to eq true
+  end
 
-#   it 'finds word in diag of array' do
-#     puzzle = [
-#     ["a", "w", "o", "l", "v", "e", "s"],
-#     ["s", "o", "a", "w", "a", "h", "p"],
-#     ["i", "t", "c", "k", "e", "t", "n"],
-#     ["o", "t", "s", "d", "h", "o", "h"],
-#     ["s", "e", "h", "g", "s", "t", "a"],
-#     ["u", "r", "p", "i", "w", "e", "u"],
-#     ["z", "s", "b", "n", "u", "i", "r"]
-#     ]
+  it 'finds word in diag of array' do
+    puzzle = [
+    ["a", "w", "o", "l", "v", "e", "s"],
+    ["s", "o", "a", "w", "a", "h", "p"],
+    ["i", "t", "c", "k", "e", "t", "n"],
+    ["o", "t", "s", "d", "h", "o", "h"],
+    ["s", "e", "h", "g", "s", "t", "a"],
+    ["u", "r", "p", "i", "w", "e", "u"],
+    ["z", "s", "b", "n", "u", "i", "r"]
+    ]
 
-#     expect(straight_line_include?('nosib', puzzle)).to eq true
-#   end
+    expect(straight_line_include?('nosib', puzzle)).to eq true
+  end
 
-#   it 'finds backwards word in diag of array' do
-#     puzzle = [
-#     ["a", "w", "o", "l", "v", "e", "s"],
-#     ["s", "o", "a", "w", "a", "h", "p"],
-#     ["i", "t", "c", "k", "e", "t", "n"],
-#     ["o", "t", "s", "d", "h", "o", "h"],
-#     ["s", "e", "h", "g", "s", "t", "a"],
-#     ["u", "r", "p", "i", "w", "e", "u"],
-#     ["z", "s", "b", "n", "u", "i", "r"]
-#     ]
+  it 'finds backwards word in diag of array' do
+    puzzle = [
+    ["a", "w", "o", "l", "v", "e", "s"],
+    ["s", "o", "a", "w", "a", "h", "p"],
+    ["i", "t", "c", "k", "e", "t", "n"],
+    ["o", "t", "s", "d", "h", "o", "h"],
+    ["s", "e", "h", "g", "s", "t", "a"],
+    ["u", "r", "p", "i", "w", "e", "u"],
+    ["z", "s", "b", "n", "u", "i", "r"]
+    ]
 
-#     expect(straight_line_include?('bison', puzzle)).to eq true
-#   end
+    expect(straight_line_include?('bison', puzzle)).to eq true
+  end
 
-# end
+end
 
 describe 'horizontal?' do
 
