@@ -29,11 +29,7 @@ current_word = ""
     current_word << puzzle[row_index][j]
   end
 
-  if current_word.include?(word) || current_word.include?(word.reverse)
-    return 1
-  else
-    return 0
-  end
+  current_word.include?(word) || current_word.include?(word.reverse)
 
 end
 
@@ -46,11 +42,7 @@ current_word = ""
    current_word << puzzle[i][col_index]
  end
 
-  if current_word.include?(word) || current_word.include?(word.reverse)
-      return 1
-  else
-      return 0
-  end
+  current_word.include?(word) || current_word.include?(word.reverse)
 
 end
 
@@ -77,11 +69,7 @@ elt = ""
     end
   end
 
-  if current_word.include?(word) || current_word.include?(word.reverse)
-    return 1
-  else
-    return 0
-  end
+  current_word.include?(word) || current_word.include?(word.reverse)
 
 end
 
@@ -119,7 +107,7 @@ def straight_line_include?(word, puzzle)
   # step3: loop through diags
   res_diags = (0..nb_diags-1).map{|diag_num| search_diags(diag_num, word, puzzle)}
 
-  return res_rows.any?{|elm| elm == 1} || res_columns.any?{|elm| elm == 1} || res_diags.any?{|elm| elm == 1}
+  return res_rows.any?{|elm| elm == true} || res_columns.any?{|elm| elm == true} || res_diags.any?{|elm| elm == true}
 end
 
 p straight_line_include?("bison", puzzle)
