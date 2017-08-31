@@ -9,3 +9,5 @@ puzzle = [
   ["u", "r", "p", "i", "w", "e", "u"],
   ["z", "s", "b", "n", "u", "i", "r"]
 ]
+
+straight_line_include?("weu", puzzle)
