@@ -1,6 +1,6 @@
 #Check to see if a word is present in the puzzle (word search). Divide up the puzzle into rows and columns and see if the word is present using .include?
 #Rows are puzzle[index].join('')
-#Columns are ??
+#Columns are ?? index of puzzle row and then individual letter
 
 def straight_line_include?(word, puzzle)
  puzzle = [
@@ -12,6 +12,7 @@ def straight_line_include?(word, puzzle)
   ["u", "r", "p", "i", "w", "e", "u"],
   ["z", "s", "b", "n", "u", "i", "r"]
   ]
+
 
   column1 = puzzle[0][0] + puzzle[1][0] + puzzle[2][0] + puzzle[3][0] + puzzle[4][0] + puzzle[5][0] + puzzle[6][0]
 
@@ -25,21 +26,22 @@ def straight_line_include?(word, puzzle)
 
   column4 = puzzle[0][5] + puzzle[1][5] + puzzle[2][5] + puzzle[3][5] + puzzle[4][5] + puzzle[5][5] + puzzle[6][5]
 
-  column5 = puzzle[0][6] + puzzle[1][6] + puzzle[2][6] + puzzle[3][6] + puzzle[4][6] + puzzle[5][6] + puzzle[6][6]
+  column6 = puzzle[0][6] + puzzle[1][6] + puzzle[2][6] + puzzle[3][6] + puzzle[4][6] + puzzle[5][6] + puzzle[6][6]
 
   index = 0
   until index == puzzle.length - 1
     puzzle[index] = puzzle[index].join("")
     if puzzle[index].include?(word)
-      p true
+      return true
       exit
-    elsif column1.include?(word)
-      p true
+    elsif column1.include?(word) || column2.include?(word) || column3.include?(word) || column4.include?(word) || column5.include?(word) || column6.include?(word)
+      return true
+      exit
     end
-  p false
+  return false
   end
 end
-straight_line_include?("wolves", puzzle = [
+straight_line_include?("zsbnuir", puzzle = [
   ["a", "w", "o", "l", "v", "e", "s"],
   ["s", "o", "a", "w", "a", "h", "p"],
   ["i", "t", "c", "k", "e", "t", "n"],
