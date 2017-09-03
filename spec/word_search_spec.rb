@@ -12,11 +12,19 @@ puzzle = [
   ["z", "s", "b", "n", "u", "i", "r"]
   ]
 
-  it "returns true if a method is present in the puzzle" do
-    expect(straight_line_include?("otter", puzzle)).to eq(true)
+  it "returns true if a word is present in the puzzle - search by column" do
+    expect(straight_line_include?("otters", puzzle)).to eq(true)
   end
 
-  it "returns false if a method is not present in the puzzle" do
+  it "returns true if a word is present in the puzzle - search by diagonal" do
+    expect(straight_line_include?("bison", puzzle)).to eq(true)
+  end
+
+   it "returns true if a word is present in the puzzle - search by row" do
+    expect(straight_line_include?("wolves", puzzle)).to eq(true)
+  end
+
+  it "returns false if a word is not present in the puzzle" do
     expect(straight_line_include?("banana", puzzle)).to eq(false)
   end
 
